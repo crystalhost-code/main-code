@@ -1,6 +1,6 @@
 # CrystalHost
 
-Website for [CrystalHost](https://crystalhost.eu)
+Strona Glowna [CrystalHost](https://crystalhost.eu)
 
 ## Last changes
 
