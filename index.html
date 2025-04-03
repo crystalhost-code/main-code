@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrystalHost.eu - Strona Główna</title>
+    <link rel="icon" type="image/png" href="media/favicon.png" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <nav class="desktop_navbar">
+      <a href="#"
+        ><img
+          class="desktop_navbar_logo_img_right"
+          src="media/crystal_host.png"
+          alt="logo right"
+      /></a>
+      <a href="#" class="desktop_navbar_link">Administracja</a>
+      <a href="#discord-widget" class="desktop_navbar_link scroll">Community</a>
+      <a href="#why-us" class="desktop_navbar_link scroll">O nas</a>
+      <div class="desktop_navbar_link2_div" onclick="scrollToElement('join')">
+        <span class="desktop_navbar_link2 scroll">Panel Serwera</span>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"
+        ><img
+          class="mobile_navbar_logo_img"
+          src="media/logo_small.png"
+          alt="logo"
+      /></a>
+      <div id="mobile_navbar_links">
+        <a
+          class="mobile_navbar_link"
+          onclick="mobile_navbar_link_hider()"
+          href="https://wiki.crystalhost.pl/"
+          >Crystal Wiki</a
+        >
+        <a
+          class="mobile_navbar_link scroll"
+          onclick="mobile_navbar_link_hider()"
+          href="#discord-widget"
+          >Community</a
+        >
+        <a
+          class="mobile_navbar_link scroll"
+          onclick="mobile_navbar_link_hider()"
+          href="#why-us"
+          >O nas</a
+        >
+        <a
+          class="mobile_navbar_link scroll"
+          onclick="mobile_navbar_link_hider()"
+          href="#join"
+          >Nasza Administracja</a
+        >
+        <a
+          class="mobile_navbar_link scroll"
+          onclick="mobile_navbar_link_hider()"
+          href="datace"
+          >Nasze Data Centra</a
+        >
+      </div>
+      <div class="icon" onclick="mobile_navbar_link_hider()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media/crystalhost-logo.png" alt="logo" />
+        </a>
+        <div class="main1_description">
+          <a>Minecraft,</a>
+          <a class="main1_actcent">Na twoich zasadach</a><a>.</a>
+        </div>
+        <div class="main1_ipcopier_div">
+          <button class="why-us-button" type="button">
+            <a href="#why-us" class="scroll">Dlaczego jesteśmy najlepsi?</a>
+          </button>
+        </div>
+        <a href="#more" class="scroll">
+          <img
+            alt="downarrow"
+            class="main1_downarrow"
+            src="media/downarrow.png"
+          />
+        </a>
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">Jakie Oferty Posiadamy</a>
+        <div class="pricing-container">
+          <div class="pricing-blocks"></div>
+          <div class="switch-container">
+            <div class="switch" onclick="toggleSwitch(this)">
+              <div class="toggle"></div>
+            </div>
+          </div>
+          <span style="margin: 20px 0; font-size: xx-large" id="machine-name"
+            >Maszyna 1
+          </span>
+        </div>
+      </div>
+      <div>
+        <div id="discord"></div>
+        <div class="main4">
+          <div class="why-us-container" id="why-us">
+            <div class="why-us-header">
+              <h1>Dlaczego akurat my?</h1>
+            </div>
+            <div class="why-us-blocks">
+              <div class="why-us-info-block">
+                <i class="fa-solid fa-rocket why-us-icon"></i>
+                <h5 class="why-us-header">Informacje o serwerach</h5>
+                <span class="why-us-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                  deserunt molestias in molestiae? Deserunt, minus.
+                </span>
+              </div>
+              <div class="why-us-info-block">
+                <i class="fa-solid fa-shield why-us-icon"></i>
+                <h5 class="why-us-header">Ochrona Anty-DDOS</h5>
+                <span class="why-us-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Blanditiis harum veniam ad impedit itaque laudantium.
+                </span>
+              </div>
+              <div class="why-us-info-block">
+                <i class="fa-solid fa-globe why-us-icon"></i>
+                <h5 class="why-us-header">Subdomeny</h5>
+                <span class="why-us-description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Pariatur ut, vel ullam temporibus odio autem!
+                </span>
+              </div>
+              <div
+                class="why-us-info-block"
+                onclick="goToPage('https://status.crystalhost.eu')"
+              >
+                <i class="fa-solid fa-signal why-us-icon"></i>
+                <h5 class="why-us-header">status.crystalhot.eu</h5>
+                <span class="why-us-description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+                  veritatis iste molestias maxime pariatur corporis.
+                </span>
+              </div>
+              <div class="why-us-info-block">
+                <i class="fa-solid fa-server why-us-icon"></i>
+                <h5 class="why-us-header">Serwery partnerskie</h5>
+                <span class="why-us-description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Debitis dicta atque, hic provident velit ut!
+                </span>
+              </div>
+              <div class="why-us-info-block">
+                <i class="fa-solid fa-money-bill-wave why-us-icon"></i>
+                <h5 class="why-us-header">Cennik</h5>
+                <span class="why-us-description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Consequatur veniam, soluta reprehenderit tempore fuga amet?
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="about"></div>
+        <div class="main5">
+          <div class="faq-container">
+            <h1 class="faq-header">Najczęściej zadawane pytania</h1>
+            <div class="faq-items" id="faq-items"></div>
+          </div>
+        </div>
+
+        <div class="main3">
+          <span class="headline">Serwer Partnerski Już Wkrótce</span>
+          <div class="main3_join_div_div">
+            <div class="main3_join_div">
+              <span class="main3_join_title">Java</span>
+              <div class="main3_join_content_div">
+                <div class="main3_join_categories">
+                  <span>IP:</span>
+                  <span>Version:</span>
+                </div>
+                <div class="main3_join_values">
+                  <span>agelat.net</span>
+                  <span>1.19.X-1.20.X</span>
+                </div>
+              </div>
+            </div>
+            <div class="main3_join_div">
+              <span class="main3_join_title">Bedrock</span>
+              <div class="main3_join_content_div">
+                <div class="main3_join_categories">
+                  <span>IP:</span>
+                  <span>Port:</span>
+                </div>
+                <div class="main3_join_values">
+                  <span>bedrock.agelat.net</span>
+                  <span>brak</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dc-widget">
+          <a class="headline" id="discord-widget"
+            >Dołącz do naszego community</a
+          >
+          <div class="main4_dc_div">
+            <!-- <iframe src="https://discord.com/widget?id=SERVER_ID&theme=dark"  allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
+            <div class="main4_dc_description_div">
+              <a class="main4_dc_description_title">Rozmawiaj juz teraz</a>
+              <a class="main4_dc_description">
+                ・Poznawaj ludzi <br />
+                ・Szukaj naszych serwerów <br />
+                ・Bądź informowany o nowościach <br />
+                ・Zakup Serwer <br /><br />・ I więcej
+              </a>
+              <a href="https://discord.gg/9Qqdm5ydKU" class="main4_dc_button_a">
+                <div class="main4_dc_button">Join</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-container">
+        <div class="stats">
+          <div class="stats-item">
+            <i class="fa-regular fa-user stats-icon"></i>
+            <h2>4</h2>
+            <span class="stats-text">CLIENTS</span>
+          </div>
+          <div class="stats-item">
+            <i class="fa-solid fa-server stats-icon"></i>
+            <h2>3</h2>
+            <span class="stats-text">SERVER</span>
+          </div>
+          <div class="stats-item">
+            <i class="fa-solid fa-gear stats-icon"></i>
+            <h2>6</h2>
+            <span class="stats-text">INSTALLS</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-container">
+        <footer>
+          <div class="footer-main">
+            <div class="footer-item">
+              <img
+                id="footer-logo"
+                src="media/crystal_host.png"
+                alt="crystal-host-Logo"
+              />
+              <p>Hosting na którym możesz polegać</p>
+              <div class="socials">
+                <i class="fa-brands fa-facebook icon"></i>
+                <i class="fa-brands fa-x-twitter icon"></i>
+                <i class="fa-brands fa-youtube icon"></i>
+                <i class="fa-brands fa-instagram icon"></i>
+              </div>
+            </div>
+            <div class="footer-item">
+              <h2>Infomarcje</h2>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Strona główna</a
+              >
+              <a
+                href="files/Polityka-Crystalhost.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Polityka prywatności</a
+              >
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Regulamin
+              </a>
+            </div>
+            <div class="footer-item">
+              <h2>Kontakt</h2>
+              <span class="footer-info">
+                <i class="fa-solid fa-envelope icon"></i>
+                <a href="mailto:support@crystalhost.eu"
+                  >support@crystalhost.eu</a
+                >
+              </span>
+              <span class="footer-info">
+                <i class="fa-brands fa-discord"></i>
+                <a href="dsc.crystalhost.eu">dsc.crystalhost.eu</a>
+              </span>
+            </div>
+            <div class="footer-item">
+              <h2>Dane firmy</h2>
+              <span>Adres: </span>
+              <span>Numer telefonu: </span>
+              <span>Kraj: </span>
+              <span>Code: </span>
+            </div>
+          </div>
+          <div class="copyright-div">
+            <span class="copyright" onclick="scrollUp(0)"
+              >Made by barmc - Copyright &copy; 2025 CrystalHost.eu
+            </span>
+          </div>
+        </footer>
+      </div>
+      <div class="cookie-banner">
+        <p class="cookie-text">
+          Ta strona używa plików cookie, aby zapewnić najlepsze doświadczenie
+          użytkownika. Kontynuując korzystanie z witryny, wyrażasz zgodę na ich
+          użycie zgodnie z naszą
+          <a class="cookiesLink" href="files/Polityka-Crystalhost.pdf"
+            >polityką prywatności.</a
+          >
+        </p>
+
+        <button class="cookie-btn" id="cookieBtn">Zaakceptuj</button>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/scrollLinks.js"></script>
+  <script src="scripts/mobileNavbarLinkHider.js"></script>
+  <script src="scripts/goToPage.js"></script>
+  <script src="scripts/scrollUp.js"></script>
+  <script src="scripts/scrollToElement.js"></script>
+  <script src="scripts/copyText.js"></script>
+  <script src="./scripts/cookies.js"></script>
+  <script src="./scripts/components/faq.js"></script>
+  <script src="./scripts/components/pricing.js"></script>
+</html>

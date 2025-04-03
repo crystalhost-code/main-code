@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasze Centra Danych </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: rgb(5, 5, 5);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+        }
+        .leaflet-marker-icon {
+            filter: invert(150%) sepia(3%) saturate(500%) hue-rotate(348deg) brightness(90%) contrast(90%);
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+<script src="scripts/showMap.js"></script>
+</html>
