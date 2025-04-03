@@ -1,0 +1,44 @@
+.stats-container{
+    background-image: url("../media/stats-background.jpg");
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stats{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stats-item{
+    margin-top: 40px;
+    width: 33% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.5rem;
+    align-items: center;
+    padding: 60px;
+}
+.stats-text{
+    font-size: 1.5rem;
+}
+.stats-icon{
+    color: rgb(65, 21, 106);
+}
+@media (max-width: 500px) {
+    .stats{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        
+    }
+    .stats-container{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../media/stats-background-mobile.jpg");
+    }
+}

@@ -1,0 +1,32 @@
+@import url(https://fonts.bunny.net/css?family=space-grotesk:500);
+
+:root {
+  --nice-padding: 6rem;
+  --roundness: 0.75rem;
+  --accent1: #02db02;
+  --accent2: #05b305;
+  --accent2_transp: #05b30555;
+  --background1: #212529;
+  --background2: #16191b;
+
+  color-scheme: dark;
+}
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
+body {
+  background-color: var(--background1);
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}

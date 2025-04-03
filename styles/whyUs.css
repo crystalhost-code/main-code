@@ -1,0 +1,38 @@
+.why-us-container {
+  margin-top: 60px;
+  text-align: center;
+  color: #fff;
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: none;
+}
+.why-us-icon {
+  border-radius: 50%;
+  background-color: #0e0e0e;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.why-us-info-block {
+  width: 200px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.why-us-header {
+  font-size: 1rem;
+}
+.why-us-blocks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  width: 50%;
+  padding: 70px;
+}
+.why-us-description {
+  color: gray;
+}

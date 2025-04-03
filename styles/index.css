@@ -1,0 +1,12 @@
+/* main file, all css files are imported here */
+@import url("./root.css");
+@import url("./navbar.css");
+@import url("./main.css");
+@import url("style.css");
+@import url("./footer.css");
+@import url("./stats.css");
+@import url("./whyUs.css");
+@import url("./faq.css");
+@import url("./pricing.css");
+@import url("./cookie.css");
+@import url("./switch.css");
